@@ -212,7 +212,9 @@ function loadTasks(data, token, room, tipo) {
       data = data.filter(task => !isRedacao(task));
       console.log(`⚠️ Ignorado: Tipo "${tipo}" - Nenhuma Redação será processada.`);
     }
-
+  if (!data || data.length === 0) {
+      Atividade('TAREFA-SP','🚫 Nenhuma atividade disponível');
+  }
   const redacaoTasks = data.filter(task =>
     task.tags.some(t => t.toLowerCase().includes("redacao"))
   );
