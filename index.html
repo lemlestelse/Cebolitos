@@ -3,57 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cebolitos - Sistema de Atividades</title>
+    <title>Cebolitos Pro - Sistema Avançado de Automação</title>
     <link rel="stylesheet" href="src/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧅</text></svg>">
 </head>
 <body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
     <!-- Login Screen -->
     <section id="loginScreen" class="screen active">
         <div class="login-container">
+            <div class="login-background-pattern"></div>
+            
             <div class="login-header">
-                <div class="logo">
-                    <div class="logo-icon">C</div>
-                    <h1>Cebolitos</h1>
+                <div class="logo-container">
+                    <div class="logo-wrapper">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="logo-rings">
+                            <div class="ring ring-1"></div>
+                            <div class="ring ring-2"></div>
+                            <div class="ring ring-3"></div>
+                        </div>
+                    </div>
+                    <h1>Cebolitos <span class="pro-badge">PRO</span></h1>
                 </div>
-                <p class="subtitle">Sistema Automatizado de Atividades</p>
+                <p class="subtitle">Sistema Avançado de Automação Educacional</p>
+                <div class="version-info">v2.0.1 • Build 2025.01</div>
             </div>
 
             <form id="loginForm" class="login-form">
                 <div class="input-group">
-                    <label for="ra">Registro Acadêmico</label>
-                    <input type="text" id="ra" placeholder="Ex: 00011198235xSP" required>
-                    <div class="input-line"></div>
+                    <label for="ra">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        Registro Acadêmico
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="text" id="ra" placeholder="Ex: 00011198235xSP" required>
+                        <div class="input-focus-line"></div>
+                    </div>
                 </div>
 
                 <div class="input-group">
-                    <label for="senha">Senha</label>
-                    <div class="password-container">
+                    <label for="senha">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <circle cx="12" cy="16" r="1"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                        Senha de Acesso
+                    </label>
+                    <div class="input-wrapper">
                         <input type="password" id="senha" placeholder="Digite sua senha" required>
                         <button type="button" id="togglePassword" class="password-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
                             </svg>
                         </button>
+                        <div class="input-focus-line"></div>
                     </div>
-                    <div class="input-line"></div>
+                </div>
+
+                <div class="login-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        Lembrar credenciais
+                    </label>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
                 </div>
 
                 <button type="submit" id="loginButton" class="login-btn">
-                    <span class="btn-text">Iniciar Sistema</span>
-                    <div class="btn-loader hidden">
+                    <span class="btn-content">
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                            <polyline points="10,17 15,12 10,7"/>
+                            <line x1="15" y1="12" x2="3" y2="12"/>
+                        </svg>
+                        <span class="btn-text">Iniciar Sistema</span>
+                    </span>
+                    <div class="btn-loader">
                         <div class="spinner"></div>
                     </div>
+                    <div class="btn-ripple"></div>
                 </button>
             </form>
 
             <div class="login-footer">
+                <div class="security-info">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Conexão segura SSL/TLS</span>
+                </div>
                 <a href="https://github.com/Cobra-Fumando/Thiago-Zanini" target="_blank" class="github-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
-                    <span>Design por Cobra</span>
+                    <span>Desenvolvido por Cobra</span>
                 </a>
             </div>
         </div>
@@ -62,79 +119,653 @@
     <!-- Dashboard Screen -->
     <section id="dashboardScreen" class="screen">
         <div class="dashboard-container">
-            <!-- Header -->
-            <header class="dashboard-header">
-                <div class="header-left">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
                     <div class="logo-small">
-                        <div class="logo-icon">C</div>
+                        <div class="logo-icon-small">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 12l2 2 4-4"/>
+                            </svg>
+                        </div>
                         <span>Cebolitos</span>
                     </div>
-                </div>
-                <div class="header-right">
-                    <div class="user-info">
-                        <span id="userRA">Usuário</span>
-                    </div>
-                    <button id="logoutButton" class="logout-btn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                            <polyline points="16,17 21,12 16,7"></polyline>
-                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                    <button id="sidebarToggle" class="sidebar-toggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <line x1="3" y1="12" x2="21" y2="12"/>
+                            <line x1="3" y1="18" x2="21" y2="18"/>
                         </svg>
                     </button>
                 </div>
-            </header>
+
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" data-section="dashboard">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="activities">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10,9 9,9 8,9"/>
+                        </svg>
+                        <span>Atividades</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="analytics">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                        </svg>
+                        <span>Análises</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="settings">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                        <span>Configurações</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="user-info">
+                            <div class="user-name" id="userRA">Usuário</div>
+                            <div class="user-status">Online</div>
+                        </div>
+                    </div>
+                    <button id="logoutButton" class="logout-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                            <polyline points="16,17 21,12 16,7"/>
+                            <line x1="21" y1="12" x2="9" y2="12"/>
+                        </svg>
+                    </button>
+                </div>
+            </aside>
 
             <!-- Main Content -->
-            <main class="dashboard-main">
-                <!-- Status Panel -->
-                <div class="status-panel">
-                    <div class="status-card">
-                        <div class="status-icon searching">
-                            <div class="pulse-ring"></div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="M21 21l-4.35-4.35"></path>
+            <main class="main-content">
+                <!-- Header -->
+                <header class="main-header">
+                    <div class="header-left">
+                        <h1 id="pageTitle">Dashboard</h1>
+                        <div class="breadcrumb">
+                            <span>Cebolitos</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,18 15,12 9,6"/>
                             </svg>
-                        </div>
-                        <div class="status-info">
-                            <h3 id="statusTitle">Procurando Atividades</h3>
-                            <p id="statusDescription">Conectando ao sistema...</p>
+                            <span id="currentPage">Dashboard</span>
                         </div>
                     </div>
-                    
-                    <div class="progress-container">
-                        <div class="progress-bar">
-                            <div id="progressFill" class="progress-fill"></div>
+                    <div class="header-right">
+                        <div class="header-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="totalActivities">0</span>
+                                <span class="stat-label">Atividades</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="completedActivities">0</span>
+                                <span class="stat-label">Concluídas</span>
+                            </div>
                         </div>
-                        <span id="progressText">0%</span>
-                    </div>
-                </div>
-
-                <!-- Activities Panel -->
-                <div class="activities-panel">
-                    <div class="panel-header">
-                        <h2>Atividades Encontradas</h2>
-                        <div class="activity-counter">
-                            <span id="activityCount">0</span>
-                        </div>
-                    </div>
-                    
-                    <div id="activitiesList" class="activities-list">
-                        <!-- Activities will be populated here -->
-                    </div>
-
-                    <div id="noActivities" class="no-activities hidden">
-                        <div class="no-activities-icon">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="12" y1="8" x2="12" y2="12"></line>
-                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        <button id="refreshButton" class="refresh-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23,4 23,10 17,10"/>
+                                <polyline points="1,20 1,14 7,14"/>
+                                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
                             </svg>
-                        </div>
-                        <h3>Nenhuma Atividade Encontrada</h3>
-                        <p>Não há atividades pendentes no momento.</p>
+                        </button>
                     </div>
-                </div>
+                </header>
+
+                <!-- Dashboard Section -->
+                <section id="dashboardSection" class="content-section active">
+                    <div class="dashboard-grid">
+                        <!-- Quick Stats -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon success">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                        <polyline points="22,4 12,14.01 9,11.01"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 id="dashCompletedCount">0</h3>
+                                    <p>Atividades Concluídas</p>
+                                    <div class="stat-trend positive">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/>
+                                            <polyline points="17,6 23,6 23,12"/>
+                                        </svg>
+                                        <span>+12%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon warning">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 id="dashPendingCount">0</h3>
+                                    <p>Atividades Pendentes</p>
+                                    <div class="stat-trend neutral">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="18" y1="6" x2="6" y2="18"/>
+                                            <line x1="6" y1="6" x2="18" y2="18"/>
+                                        </svg>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon info">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 id="dashProcessingTime">0s</h3>
+                                    <p>Tempo Médio</p>
+                                    <div class="stat-trend positive">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="23,18 13.5,8.5 8.5,13.5 1,6"/>
+                                            <polyline points="17,18 23,18 23,12"/>
+                                        </svg>
+                                        <span>-8%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon error">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="15" y1="9" x2="9" y2="15"/>
+                                        <line x1="9" y1="9" x2="15" y2="15"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <h3 id="dashErrorCount">0</h3>
+                                    <p>Erros Encontrados</p>
+                                    <div class="stat-trend negative">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="23,18 13.5,8.5 8.5,13.5 1,6"/>
+                                            <polyline points="17,18 23,18 23,12"/>
+                                        </svg>
+                                        <span>+3%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- System Status -->
+                        <div class="system-status-card">
+                            <div class="card-header">
+                                <h3>Status do Sistema</h3>
+                                <div class="status-indicator online">
+                                    <div class="status-dot"></div>
+                                    <span>Online</span>
+                                </div>
+                            </div>
+                            <div class="status-content">
+                                <div class="status-item">
+                                    <span class="status-label">API Educação SP</span>
+                                    <div class="status-value success">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20,6 9,17 4,12"/>
+                                        </svg>
+                                        <span>Conectado</span>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">Servidor de Tarefas</span>
+                                    <div class="status-value success">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20,6 9,17 4,12"/>
+                                        </svg>
+                                        <span>Operacional</span>
+                                    </div>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">Última Sincronização</span>
+                                    <div class="status-value">
+                                        <span id="lastSync">Nunca</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="quick-actions-card">
+                            <div class="card-header">
+                                <h3>Ações Rápidas</h3>
+                            </div>
+                            <div class="actions-grid">
+                                <button class="action-btn primary" id="searchActivitiesBtn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="M21 21l-4.35-4.35"/>
+                                    </svg>
+                                    <span>Buscar Atividades</span>
+                                </button>
+                                <button class="action-btn secondary" id="processAllBtn" disabled>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="5,3 19,12 5,21"/>
+                                    </svg>
+                                    <span>Processar Todas</span>
+                                </button>
+                                <button class="action-btn tertiary" id="exportReportBtn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7,10 12,15 17,10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    <span>Exportar Relatório</span>
+                                </button>
+                                <button class="action-btn quaternary" id="clearDataBtn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="3,6 5,6 21,6"/>
+                                        <path d="M19,6v14a2,2,0,0,1-2,2H7a2,2,0,0,1-2-2V6m3,0V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V6"/>
+                                    </svg>
+                                    <span>Limpar Dados</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activities Section -->
+                <section id="activitiesSection" class="content-section">
+                    <!-- Search Panel -->
+                    <div class="search-panel">
+                        <div class="search-header">
+                            <h3>Busca de Atividades</h3>
+                            <div class="search-controls">
+                                <button id="advancedSearchToggle" class="toggle-btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="4" y1="21" x2="4" y2="14"/>
+                                        <line x1="4" y1="10" x2="4" y2="3"/>
+                                        <line x1="12" y1="21" x2="12" y2="12"/>
+                                        <line x1="12" y1="8" x2="12" y2="3"/>
+                                        <line x1="20" y1="21" x2="20" y2="16"/>
+                                        <line x1="20" y1="12" x2="20" y2="3"/>
+                                        <line x1="1" y1="14" x2="7" y2="14"/>
+                                        <line x1="9" y1="8" x2="15" y2="8"/>
+                                        <line x1="17" y1="16" x2="23" y2="16"/>
+                                    </svg>
+                                    <span>Busca Avançada</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="search-content">
+                            <div class="search-basic">
+                                <div class="search-input-group">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="M21 21l-4.35-4.35"/>
+                                    </svg>
+                                    <input type="text" id="searchInput" placeholder="Buscar atividades por título, tipo ou descrição...">
+                                    <button id="clearSearch" class="clear-search">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="18" y1="6" x2="6" y2="18"/>
+                                            <line x1="6" y1="6" x2="18" y2="18"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="advancedSearch" class="search-advanced hidden">
+                                <div class="advanced-filters">
+                                    <div class="filter-group">
+                                        <label>Tipo de Atividade</label>
+                                        <select id="activityTypeFilter">
+                                            <option value="">Todos os tipos</option>
+                                            <option value="normal">Normal</option>
+                                            <option value="expired">Expirada</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter-group">
+                                        <label>Status</label>
+                                        <select id="statusFilter">
+                                            <option value="">Todos os status</option>
+                                            <option value="pending">Pendente</option>
+                                            <option value="processing">Processando</option>
+                                            <option value="completed">Concluída</option>
+                                            <option value="error">Erro</option>
+                                        </select>
+                                    </div>
+                                    <div class="filter-group">
+                                        <label>Incluir Redações</label>
+                                        <label class="switch">
+                                            <input type="checkbox" id="includeEssays">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status Panel -->
+                    <div class="status-panel">
+                        <div class="status-card-main">
+                            <div class="status-icon-container">
+                                <div class="status-icon" id="mainStatusIcon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="M21 21l-4.35-4.35"/>
+                                    </svg>
+                                    <div class="pulse-ring"></div>
+                                </div>
+                            </div>
+                            <div class="status-info">
+                                <h3 id="statusTitle">Pronto para Buscar</h3>
+                                <p id="statusDescription">Clique em "Buscar Atividades" para começar</p>
+                                <div class="status-meta">
+                                    <span id="statusTime">--:--</span>
+                                    <span class="separator">•</span>
+                                    <span id="statusDetails">Aguardando</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-header">
+                                <span class="progress-label">Progresso</span>
+                                <span id="progressText" class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div id="progressFill" class="progress-fill"></div>
+                                <div class="progress-glow"></div>
+                            </div>
+                            <div class="progress-steps">
+                                <div class="step" data-step="1">
+                                    <div class="step-dot"></div>
+                                    <span>Conectar</span>
+                                </div>
+                                <div class="step" data-step="2">
+                                    <div class="step-dot"></div>
+                                    <span>Autenticar</span>
+                                </div>
+                                <div class="step" data-step="3">
+                                    <div class="step-dot"></div>
+                                    <span>Buscar</span>
+                                </div>
+                                <div class="step" data-step="4">
+                                    <div class="step-dot"></div>
+                                    <span>Carregar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activities Panel -->
+                    <div class="activities-panel">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <h3>Atividades Encontradas</h3>
+                                <div class="activity-counter">
+                                    <span id="activityCount">0</span>
+                                </div>
+                            </div>
+                            <div class="panel-controls">
+                                <div class="view-controls">
+                                    <button class="view-btn active" data-view="grid">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="7" height="7"/>
+                                            <rect x="14" y="3" width="7" height="7"/>
+                                            <rect x="14" y="14" width="7" height="7"/>
+                                            <rect x="3" y="14" width="7" height="7"/>
+                                        </svg>
+                                    </button>
+                                    <button class="view-btn" data-view="list">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="8" y1="6" x2="21" y2="6"/>
+                                            <line x1="8" y1="12" x2="21" y2="12"/>
+                                            <line x1="8" y1="18" x2="21" y2="18"/>
+                                            <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                            <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                            <line x1="3" y1="18" x2="3.01" y2="18"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="sort-controls">
+                                    <select id="sortActivities">
+                                        <option value="title">Ordenar por Título</option>
+                                        <option value="type">Ordenar por Tipo</option>
+                                        <option value="status">Ordenar por Status</option>
+                                        <option value="date">Ordenar por Data</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="activitiesList" class="activities-list grid-view">
+                            <!-- Activities will be populated here -->
+                        </div>
+
+                        <div id="noActivities" class="no-activities">
+                            <div class="no-activities-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="M21 21l-4.35-4.35"/>
+                                </svg>
+                            </div>
+                            <h3>Nenhuma Atividade Encontrada</h3>
+                            <p>Clique em "Buscar Atividades" para encontrar tarefas disponíveis</p>
+                            <button id="startSearchBtn" class="start-search-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="M21 21l-4.35-4.35"/>
+                                </svg>
+                                <span>Buscar Atividades</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analytics Section -->
+                <section id="analyticsSection" class="content-section">
+                    <div class="analytics-grid">
+                        <div class="chart-card">
+                            <div class="card-header">
+                                <h3>Atividades por Dia</h3>
+                                <div class="chart-controls">
+                                    <select id="chartPeriod">
+                                        <option value="7">Últimos 7 dias</option>
+                                        <option value="30">Últimos 30 dias</option>
+                                        <option value="90">Últimos 90 dias</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="activitiesChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="performance-card">
+                            <div class="card-header">
+                                <h3>Performance</h3>
+                            </div>
+                            <div class="performance-metrics">
+                                <div class="metric">
+                                    <div class="metric-icon success">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h4>Taxa de Sucesso</h4>
+                                        <div class="metric-value">98.5%</div>
+                                        <div class="metric-progress">
+                                            <div class="progress-bar-small">
+                                                <div class="progress-fill-small" style="width: 98.5%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="metric">
+                                    <div class="metric-icon info">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <polyline points="12,6 12,12 16,14"/>
+                                        </svg>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h4>Tempo Médio</h4>
+                                        <div class="metric-value">2.3min</div>
+                                        <div class="metric-progress">
+                                            <div class="progress-bar-small">
+                                                <div class="progress-fill-small" style="width: 76%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="metric">
+                                    <div class="metric-icon warning">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                            <line x1="12" y1="9" x2="12" y2="13"/>
+                                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                        </svg>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h4>Taxa de Erro</h4>
+                                        <div class="metric-value">1.5%</div>
+                                        <div class="metric-progress">
+                                            <div class="progress-bar-small">
+                                                <div class="progress-fill-small error" style="width: 1.5%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settingsSection" class="content-section">
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <div class="card-header">
+                                <h3>Configurações Gerais</h3>
+                            </div>
+                            <div class="settings-content">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Tempo de Processamento</h4>
+                                        <p>Tempo de espera entre respostas (segundos)</p>
+                                    </div>
+                                    <div class="setting-control">
+                                        <input type="range" id="processingTime" min="30" max="300" value="90">
+                                        <span id="processingTimeValue">90s</span>
+                                    </div>
+                                </div>
+
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Processamento Automático</h4>
+                                        <p>Processar atividades automaticamente após encontrá-las</p>
+                                    </div>
+                                    <div class="setting-control">
+                                        <label class="switch">
+                                            <input type="checkbox" id="autoProcess">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Incluir Redações</h4>
+                                        <p>Incluir redações na busca de atividades</p>
+                                    </div>
+                                    <div class="setting-control">
+                                        <label class="switch">
+                                            <input type="checkbox" id="includeEssaysSettings">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Notificações</h4>
+                                        <p>Receber notificações sobre o progresso</p>
+                                    </div>
+                                    <div class="setting-control">
+                                        <label class="switch">
+                                            <input type="checkbox" id="enableNotifications" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <div class="card-header">
+                                <h3>Dados e Privacidade</h3>
+                            </div>
+                            <div class="settings-content">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Limpar Cache</h4>
+                                        <p>Remove dados temporários e cache do navegador</p>
+                                    </div>
+                                    <div class="setting-control">
+                                        <button class="btn-secondary" id="clearCacheBtn">Limpar Cache</button>
+                                    </div>
+                                </div>
+
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Exportar Dados</h4>
+                                        <p>Baixar relatório completo das atividades</p>
+                                    </div>
+                                    <div class="setting-control">
+                                        <button class="btn-primary" id="exportDataBtn">Exportar</button>
+                                    </div>
+                                </div>
+
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <h4>Resetar Configurações</h4>
+                                        <p>Restaurar todas as configurações padrão</p>
+                                    </div>
+                                    <div class="setting-control">
+                                        <button class="btn-danger" id="resetSettingsBtn">Resetar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     </section>
@@ -143,11 +774,43 @@
     <div id="notificationContainer" class="notification-container"></div>
 
     <!-- Loading Overlay -->
-    <div id="loadingOverlay" class="loading-overlay hidden">
+    <div id="loadingOverlay" class="loading-overlay">
         <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <h3>Processando Atividades</h3>
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <h3 id="loadingTitle">Processando</h3>
             <p id="loadingText">Aguarde enquanto processamos suas atividades...</p>
+            <div class="loading-progress">
+                <div class="loading-progress-bar">
+                    <div id="loadingProgressFill" class="loading-progress-fill"></div>
+                </div>
+                <span id="loadingProgressText">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity Detail Modal -->
+    <div id="activityModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Detalhes da Atividade</h3>
+                <button class="modal-close" id="closeModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Activity details will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="modalCancel">Cancelar</button>
+                <button class="btn-primary" id="modalProcess">Processar Atividade</button>
+            </div>
         </div>
     </div>
 
